@@ -1,13 +1,30 @@
-<a href="#" onclick="downloadFile()">Скачать файл</a>
-<a href="##" onclick="downloadFiles()">Скачать файл</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать файлы</title>
+</head>
+<body>
 
-<script>
-  function downloadFile() {
-    const link = document.createElement('a');
-    link.href = 'https://raw.githubusercontent.com/ZexusBerry/CFG/main/ZexusGG.kfg';
-    link.download = 'ZexusGG.kfg';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-</script>
+    <h2>Скачать файлы</h2>
+
+    <!-- Ссылка для скачивания файла ZexusGG.kfg -->
+    <a href="#" onclick="downloadFile('https://raw.githubusercontent.com/ZexusBerry/CFG/main/ZexusGG.kfg', 'ZexusGG.kfg')">Скачать ZexusGG.kfg</a><br>
+
+    <!-- Ссылка для скачивания файла HyperYaw_V1.3.lua -->
+    <a href="##" onclick="downloadFile('https://raw.githubusercontent.com/ZexusBerry/CFG/main/HyperYaw_V1.3.lua', 'HyperYaw_V1.3.lua')">Скачать HyperYaw_V1.3.lua</a>
+
+    <script>
+        function downloadFile(url, filename) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+</body>
+</html>
