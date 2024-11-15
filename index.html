@@ -1,0 +1,12 @@
+<a href="#" onclick="downloadFile()">Скачать файл</a>
+
+<script>
+  function downloadFile() {
+    const link = document.createElement('a');
+    link.href = 'https://raw.githubusercontent.com/ZexusBerry/CFG/main/ZexusGG.kfg';
+    link.download = 'ZexusGG.kfg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
